@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chirag</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="profile-card">
+      <div class="image">
+        <img src="cpng.png" alt="" class="chirag-img" />
+      </div>
+
+      <div class="text-data">
+        <span class="name">Chirag</span>
+        <span class="branch">Bachelor Of Computer Application</span>
+      </div>
+      <div class="media-buttons">
+        <a href="https://www.facebook.com/share/1AfhaRQSgA/" style="background: #4267b2" class="link">
+          <i class="bx bxl-facebook"></i>
+        </a>
+        <a href="https://x.com/ChiragDhiman586?t=3HdTCGFy9hbxt1PD0IsRpg&s=09" style="background: #1da1f2" class="link">
+          <i class="bx bxl-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/chiragdhiman.22/profilecard/?igsh=MTE1NTUxNnJzbmNmYQ==" style="background: #e1306c" class="link">
+          <i class="bx bxl-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/@CHIRAG-D22" style="background: #ff0000" class="link">
+          <i class="bx bxl-youtube"></i>
+        </a>
+      </div>
+      <div class="buttons">
+        <button class="button"><a href="index2.html">--> Portfolio <--</a></button>
+      </div>
+      </div>
+      <script>
+    // JavaScript to enhance functionality
+document.addEventListener('DOMContentLoaded', () => {
+  // Select all social media links
+  const mediaLinks = document.querySelectorAll('.media-buttons .link');
+
+  // Add hover effects for the links
+  mediaLinks.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      link.style.transform = 'scale(1.1)';
+    });
+    link.addEventListener('mouseleave', () => {
+      link.style.transform = 'scale(1)';
+    });
+  });
+
+  // Handle Portfolio button click
+  const portfolioButton = document.querySelector('.buttons .button a');
+  portfolioButton.addEventListener('click', (event) => {
+    // Prevent default behavior for the link
+    event.preventDefault();
+    // Navigate to the portfolio page
+    window.location.href = portfolioButton.getAttribute('href');
+  });
+
+  // Add click feedback to social links
+  mediaLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault(); // Optional: Stop the default navigation for testing
+      alert(`You clicked on: ${link.querySelector('i').classList[1]}`);
+      // Uncomment the next line to allow navigation
+      // window.open(link.getAttribute('href'), '_blank');
+    });
+  });
+});
+      </script>
+  </body>
+</html>
