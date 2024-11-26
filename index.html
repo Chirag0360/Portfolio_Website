@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chirag</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Boxicons CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body>
+    <div class="profile-card">
+      <div class="image">
+        <img src="cpng.png" alt="" class="chirag-img"/>
+      </div>
+
+      <div class="text-data">
+        <span class="name">Chirag</span>
+        <span class="branch">Bachelor Of Computer Application</span>
+      </div>
+      <div class="media-buttons">
+        <a href="https://www.linkedin.com/in/chirag-dhiman-9a5974282?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Chirag0360" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.facebook.com/share/1AfhaRQSgA/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/chiragdhiman.22/profilecard/?igsh=MTE1NTUxNnJzbmNmYQ==" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@CHIRAG-D22" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://x.com/ChiragDhiman586?t=IGkIftOgoX4wD4YRZKvukg&s=09" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="buttons">
+        <button class="button"><a href="index2.html">--> Portfolio <--</a></button>
+      </div>
+      </div>
+      <script>
+    // JavaScript to enhance functionality
+document.addEventListener('DOMContentLoaded', () => {
+  // Select all social media links
+  const mediaLinks = document.querySelectorAll('.media-buttons .link');
+
+  // Add hover effects for the links
+  mediaLinks.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      link.style.transform = 'scale(1.1)';
+    });
+    link.addEventListener('mouseleave', () => {
+      link.style.transform = 'scale(1)';
+    });
+  });
+
+  // Handle Portfolio button click
+  const portfolioButton = document.querySelector('.buttons .button a');
+  portfolioButton.addEventListener('click', (event) => {
+    // Prevent default behavior for the link
+    event.preventDefault();
+    // Navigate to the portfolio page
+    window.location.href = portfolioButton.getAttribute('href');
+  });
+
+  // Add click feedback to social links
+  mediaLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault(); // Optional: Stop the default navigation for testing
+      alert(`You clicked on: ${link.querySelector('i').classList[1]}`);
+      // Uncomment the next line to allow navigation
+      // window.open(link.getAttribute('href'), '_blank');
+    });
+  });
+});
+      </script>
+  </body>
+</html>
